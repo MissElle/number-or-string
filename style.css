@@ -1,1 +1,106 @@
-*/Numbers and Strings - Add or Concatenate - style.js*/
+/* Numbers or Strings - Add or Concatenate - style.css */
+ 
+/*----------------------------------------------------------*/
+/*This is the form layout*/
+ 
+.wrapper {
+  width: 75em;
+  margin: 0 auto;
+}
+ 
+@media all and (max-width: 75em) {
+  .wrapper {width: 100%;}
+}
+ 
+textarea {
+width: 70%;
+max-height: 2em;
+text-align: center;
+}
+ 
+button {
+  width: 10%;
+  height: 1.5em;
+  text-align: center;
+}
+ 
+form {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+ 
+/*----------------------------------------------------------*/
+/*This is the layout for the words used and word count*/
+ 
+.columns {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  height: 70vh;
+  background-color: #fff000;
+}
+ 
+ 
+#words {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  clip-path: polygon(75% 0%, 100% 100%, 0% 100%, 25% 0%);
+  width: 30%;
+  line-height: 0em;
+  background-color:#ff0546;
+  overflow: visible;
+}
+ 
+#wordcount {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  clip-path: polygon(75% 0%, 100% 100%, 0% 100%, 25% 0%);
+  width: 30%;
+  line-height: 0em;
+  background-color:#ff0546;
+  overflow: visible;
+}
+ 
+#words p, #wordcount p {
+  padding: 0 .2em;
+  line-height: 0em;
+}
+ 
+/*----------------------------------------------------------*/
+/*This is the layout for the Hitbox and StoryBox*/
+ 
+.stats {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+}
+ 
+.hitbox {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  width: 30%;
+  max-height: 20em;
+}
+ 
+.storybox {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 69%;
+  min-height: 20em;
+}
+ 
+.points {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+ 
