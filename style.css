@@ -1,3 +1,4 @@
+
 /* Numbers or Strings - Add or Concatenate - style.css */
  
 /*----------------------------------------------------------*/
@@ -13,8 +14,8 @@
 }
  
 textarea {
-width: 70%;
-max-height: 2em;
+width: 78%;
+max-height: 1em;
 text-align: center;
 }
  
@@ -39,7 +40,6 @@ form {
   flex-flow: row nowrap;
   justify-content: space-around;
   height: 70vh;
-  background-color: #fff000;
 }
  
  
@@ -52,7 +52,6 @@ form {
   clip-path: polygon(75% 0%, 100% 100%, 0% 100%, 25% 0%);
   width: 30%;
   line-height: 0em;
-  background-color:#ff0546;
   overflow: visible;
 }
  
@@ -65,17 +64,11 @@ form {
   clip-path: polygon(75% 0%, 100% 100%, 0% 100%, 25% 0%);
   width: 30%;
   line-height: 0em;
-  background-color:#ff0546;
   overflow: visible;
 }
  
-#words p, #wordcount p {
-  padding: 0 .2em;
-  line-height: 0em;
-}
- 
 /*----------------------------------------------------------*/
-/*These are for the bitmap images*/
+/*These are for the bitmap images and animations*/
  
 .monster {
   position: relative;
@@ -266,7 +259,8 @@ form {
   flex-flow: column nowrap;
   justify-content: space-between;
   width: 30%;
-  max-height: 20em;
+  max-height: 30em;
+  padding: 0 1em;
 }
  
 .storybox {
@@ -274,6 +268,8 @@ form {
   flex-flow: column nowrap;
   width: 69%;
   min-height: 20em;
+  padding: 0 1em;
+  text-align: justify;
 }
  
 .points {
@@ -283,3 +279,29 @@ form {
   align-items: flex-end;
 }
  
+/*----------------------------------------------------------*/
+/*This area is for styling that will not affect the formatting*/
+ 
+/*These are fonts from google - reference
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Arvo', serif;
+font-family: 'VT323', monospace;
+*/
+ 
+h1, h2, h3, h4, p, button, textarea {font-family: 'VT323', monospace;}
+ 
+h2 {font-size: 3em; line-height: 0em;}
+ 
+p {font-size: 1.3em; line-height: 1.2em;}
+h4{font-size: 1.5em;}
+.points {font-size: 2em;}
+textarea {font-size: 1.5em; border-color:transparent transparent #000000 transparent; border-width: .1em; border-style-bottom: double;}
+button {font-size: 1.5em; background-color: transparent; border-color: #000000; border-style: double; border-width: .2em;}
+ 
+#words p, #wordcount p {padding: 0 0.2em; line-height: 0em;}
+ 
+#words, #wordcount {border-color:#000000; border-width: .7em; border-style: groove;}
+.storybox, .hitbox {border-color:#000000; border-width: .5em; border-style: double;}
+.hitbox {border-left-style: none;}
+ 
+/*----------------------------------------------------------*/
