@@ -58,6 +58,8 @@ function wordFunc(word) {
  
   $.each(indWords, function(index, value) {
     compareWords(value);});
+//The wordcount html resets the area before the function runs so the numbers are right every time
+  $('#wordcount').html(' ');
   $.each(indWords, function(index, value) {
     wordCount(value);});
   $('#concatenated').append(' ', sentence);
@@ -86,7 +88,7 @@ function compareWords(el) {
  
 function wordCountTemp(el) {
   var z = 0;
-  for (var i=0; i<wordList.length; i++) {
+  for (var i=0; i<worList.length; i++) {
     if (wordList[i] === el) {
       z++;
       var count = $('<p>').text(z);
@@ -116,5 +118,15 @@ function wordCount(el, key) {
 //This will reset everything
  
 function resetForm() {
+  $('#wordcount').html(' ');
+  $('#words').html(' ');
+  $('#numcount').html(' ');
+  $('#sum').html(' ');
+  $('#mean').html(' ');
+  $('#concatenated').html(' ');
+  numList = [];
+  wordList = [];
+  obj = {};
+  sum = 0;
   console.log("the button is working");
 }
