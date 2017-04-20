@@ -84,7 +84,7 @@ function compareWords(el) {
 }
  
 //---------------------------------------------------------------------------------//
-//This will add a count of each word in the master wordList array
+//This function worked but had too many bugs. Leaving it in for recorded value
  
 function wordCountTemp(el) {
   var z = 0;
@@ -107,8 +107,8 @@ function wordCount(el) {
   count.attr('id', el);
   obj[el] = obj[el]+1|| 1;
   if(obj[el] !== 1) {
-    $('#wordcount').append(count);
-//    $count.replaceWith('#'+el);
+//    $('#wordcount').append(count);
+    $('#' +el).replaceWith(count);
   }else {
     $('#wordcount').append('<p id="'+el+'">'+1+'</p>');
   }
