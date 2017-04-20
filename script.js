@@ -7,7 +7,6 @@ var submitBut= $('#submit').click(findType);
 var resetBut= $('#reset').click(resetForm);
  
 //----------------------------------------------------------------------------------//
-//----------------------------------------------------------------------------------//
 //These are global variables
  
 var numList = [];
@@ -68,12 +67,14 @@ function wordFunc(word) {
 //This function will compare arrays, and write the word only if it doesn't already occur.
  
 function compareWords (el) {
-  var indWord = $('<p>').text(el);
-  if($.inArray(el, wordList) === -1){
+  var x = el.toLowerCase();
+  var y = x.replace(/[^a-z0-9A-Z ]/gi, '');
+  var indWord = $('<p>').text(y);
+  if($.inArray(y, wordList) === -1){
     $('#container').append(indWord);
-    wordList.push(el);
+    wordList.push(y);
   }else {
-    wordList.push(el);
+    wordList.push(y);
   }
 }
  
