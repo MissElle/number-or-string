@@ -59,7 +59,7 @@ function wordFunc(word) {
   $.each(indWords, function(index, value) {
     compareWords(value);});
 //The wordcount html resets the area before the function runs so the numbers are right every time
-  $('#wordcount').html(' ');
+//  $('#wordcount').html(' ');
   $.each(indWords, function(index, value) {
     wordCount(value);});
   $('#concatenated').append(' ', sentence);
@@ -99,17 +99,18 @@ function wordCountTemp(el) {
  
 //---------------------------------------------------------------------------------//
 //This will add a count of each word in the master wordList array
-// This code was devised using the article below by code_monk (1) and Flavius Stef (2)
+// This code was devised using the article below by code_monk
 //http://stackoverflow.com/questions/11649255/how-to-count-the-number-of-occurences-of-each-item-in-an-array
-//http://stackoverflow.com/questions/957537/how-can-i-display-a-javascript-object
  
-function wordCount(el, key) {
-  var count = $('<p>').text(parseInt(obj[el]+1));
-  obj[el] = obj[el]+1 || 1;
-  if(obj[el] === 1) {
-    $('#wordcount').append('<p>' + 1 + '</p>');
-  }else {
+function wordCount(el) {
+  var count = $('<p>').text(obj[el]+1);
+  count.attr('id', el);
+  obj[el] = obj[el]+1|| 1;
+  if(obj[el] !== 1) {
     $('#wordcount').append(count);
+//    $count.replaceWith('#'+el);
+  }else {
+    $('#wordcount').append('<p id="'+el+'">'+1+'</p>');
   }
   console.log(obj);
 }
