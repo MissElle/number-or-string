@@ -7,6 +7,7 @@ var submitBut= $('#submit').click(findType);
 var resetBut= $('#reset').click(resetForm);
  
 //----------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------//
 //These are global variables
  
 var numList = [];
@@ -22,7 +23,9 @@ function findType(el) {
   if (isNaN(el)) {
     wordFunc(el);
     console.log("this is a string");
-  }else {
+  }else if(el =='') {
+    numFunc(0);
+  } else {
     numFunc(parseInt(el));
   }
 }
@@ -49,25 +52,34 @@ function numFunc(num) {
 //This function is for words
  
 function wordFunc(word) {
- 
-  wordList.push(word);
-  var sentence = wordList.join(' ');
+  var wordCompare = [];
+  wordCompare.push(word);
+  var sentence = wordCompare.join(' ');
   var indWords = sentence.split(' ');
-  $('#concatenated').text(sentence);
  
-  for(var i=0; i<indWords.length; i++) {
-   
-    console.log(indWords[i]);
-  }
+  $.each(indWords, function(index, value) {
+    compareWords(value);});
  
+  $('#concatenated').append(' ', sentence);
   event.preventDefault();
 }
  
 //----------------------------------------------------------------------------------//
+//This function will compare arrays, and write the word only if it doesn't already occur.
  
+function compareWords (el) {
+  var indWord = $('<p>').text(el);
+  if($.inArray(el, wordList) === -1){
+    $('#container').append(indWord);
+    wordList.push(el);
+  }else {
+    wordList.push(el);
+  }
+}
+ 
+//----------------------------------------------------------------------------------//
 //This will reset everything
  
 function resetForm() {
   console.log("the button is working");
 }
- 
