@@ -75,6 +75,185 @@ form {
 }
  
 /*----------------------------------------------------------*/
+/*These are for the bitmap images*/
+ 
+.monster {
+  position: relative;
+  top: 0vh;
+  left: 0vw;
+  animation-name: jump;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-delay: 2s;
+}
+ 
+@keyframes jump {
+  0% {top: 0vh;}
+  19% {top: 0vh;}
+  21% {top: -4vh;}           
+  22% {top: 0vh;}
+  23% {top: -4vh;}
+  24% {top: 0vh;}
+  30% {top: 0vh;}
+  50% {top: 0vh;}
+  70% {top: 0vh;}
+  100% {top: 0vh;}
+}
+ 
+@keyframes shake {
+  0% {top: -2vh; left: -2vw;}
+  2% {top: 2vh; left: -2vw;}
+  4% {top:-2vh; left: 2vw;}
+  6% {top: 2vh; left: 2vw;}
+  8% {top: -2vh; left: -2vw;}
+  10% {top: 2vh; left: -2vw;}
+  12% {top:-2vh; left: 2vw;}
+  14% {top: 4vh; left: 4vw;}
+  16% {top: -4vh; left: -4vw;}
+  18% {top: 4vh; left: -4vw;}
+  20% {top:-4vh; left: 4vw;}
+  22% {top: 4vh; left: 4vw;}
+  24% {top: -4vh; left: -4vw;}
+  26% {top: 4vh; left: -4vw;}
+  28% {top:-4vh; left: 4vw;}
+  30% {top: 4vh; left: 4vw;}
+  32% {top: -4vh; left: -4vw;}
+  34% {top: 4vh; left: -4vw;}
+  36% {top:-4vh; left: 4vw;}
+  38% {top: 4vh; left: 4vw;}
+  40% {top: -6vh; left: -6vw;}
+  41% {top: 6vh; left: -6vw;}
+  42% {top: -6vh; left: -6vw;}
+  43% {top: 6vh; left: -6vw;}
+  44% {top:-6vh; left: 6vw;}
+  45% {top: 6vh; left: 6vw;}
+  46% {top:-6vh; left: 6vw;}
+  47% {top: 6vh; left: 6vw;}
+  48% {top: -6vh; left: -6vw;}
+  49% {top: 6vh; left: -6vw;}
+  50% {top: -6vh; left: -6vw;}
+  51% {top: 6vh; left: -6vw;}
+  52% {top:-6vh; left: 6vw;}
+  53% {top: 4vh; left: 4vw;}
+  54% {top:-4vh; left: 4vw;}
+  55% {top: 4vh; left: 4vw;}
+  56% {top: -4vh; left: -4vw;}
+  58% {top: 4vh; left: -4vw;}
+  60% {top:-4vh; left: 4vw;}
+  62% {top: 4vh; left: 4vw;}
+  64% {top: -4vh; left: -4vw;}
+  66% {top: 4vh; left: -4vw;}
+  68% {top:-4vh; left: 4vw;}
+  70% {top: 4vh; left: 4vw;}
+  72% {top: -4vh; left: -4vw;}
+  74% {top: 4vh; left: -4vw;}
+  76% {top:-2vh; left: 2vw;}
+  78% {top: 2vh; left: 2vw;}
+  80% {top: -2vh; left: -2vw;}
+  82% {top: 2vh; left: -2vw;}
+  84% {top:-2vh; left: 2vw;}
+  86% {top: 2vh; left: 2vw;}
+  88% {top: -2vh; left: -2vw;}
+  90% {top: 2vh; left: -2vw;}
+  92% {top:-2vh; left: 2vw;}
+  94% {top: 1vh; left: 1vw;}
+  96% {top: -1vh; left: -1vw;}
+  98% {top: 1vh; left: -1vw;}
+  100% {top:0vh; left: 0vw;}
+}
+ 
+@keyframes pan {
+  0% {top: 0vh; left: 0vw;}
+  15% {top: 0vh; left: 4vw;}
+  25% {top: 0vh; left: -4vw;}
+  30% {top: 0vh; left: 4vw;}
+  33% {top: 0vh; left: -4vw;}
+  35% {top: 0vh; left: 6vw;}
+  37% {top: 0vh; left: -6vw;}
+  40% {top: 0vh; left: 6vw;}
+  41% {top: 0vh; left: -6vw;}
+  43% {top: 0vh; left: 6vw;}
+  45% {top: 0vh; left: -6vw;}
+  47% {top: 0vh; left: 6vw;}
+  50% {top: 0vh; left: -6vw;}
+  52% {top: 0vh; left: 6vw;}
+  55% {top: 0vh; left: -6vw;}
+  57% {top: 0vh; left: 6vw;}
+  60% {top: 0vh; left: -6vw;}
+  63% {top: 0vh; left: 6vw;}
+  65% {top: 0vh; left: -6vw;}
+  67% {top: 0vh; left: 4vw;}
+  70% {top: 0vh; left: -4vw;}
+  75% {top: 0vh; left: 4vw;}
+  80% {top: 0vh; left: -4vw;}
+  85% {top: 0vh; left: 4vw;}
+  90% {top: 0vh; left: -4vw;}
+  100% {top: 0vh; left: 0vw;}
+}
+ 
+.ani {
+  margin: 4em 0;
+  background-image: url("https://misselle.github.io/number-or-string/images/bitmap.png");
+  width: 60vh;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-size: 350vh;
+  background-position: 0% top;
+  animation-name: switchsides;
+  animation-timing-function: step-start;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+ 
+@keyframes happy{
+  0% {background-position: 80% top;}
+  50% {background-position: 80% top;}
+  100% {background-position: 100% top;}
+}
+ 
+@keyframes hurt{
+  0% {background-position: 40% top;}
+  50% {background-position: 40% top;}
+  100% {background-position: 60% top;}
+}
+ 
+@keyframes switchsides{
+  0% {background-position: 0% top;}
+  50% {background-position: 20% top;}
+  100% {background-position: 0% top;}
+}
+ 
+/*----------------------------------------------------------*/
+/*These are animated in javascript*/
+ 
+#levelcounter {
+  background-image: url("https://misselle.github.io/number-or-string/images/signs.png");
+  background-size: 27vh;
+  background-repeat: no-repeat;
+  background-position: left-top;
+  opacity: 0;
+  width: 15vh;
+  height: 15vh;
+  position: absolute;
+  top: 70vh;
+  right: 1vw;
+}
+ 
+#storycounter{
+  background-image: url("https://misselle.github.io/number-or-string/images/signs.png");
+  background-size: 27vh;
+  background-repeat: no-repeat;
+  background-position: 110% top;
+  opacity: 0;
+  width: 15vh;
+  height: 15vh;
+  position: absolute;
+  top: 70vh;
+  right: 32vw;
+}
+ 
+/*----------------------------------------------------------*/
 /*This is the layout for the Hitbox and StoryBox*/
  
 .stats {

@@ -22,10 +22,22 @@ function findType(el) {
  
   if (isNaN(el)) {
     wordFunc(el);
+      //This will fade-out the story counter
+      $('#storycounter').animate({top: '70vh', opacity: '0'}, '10');
+      $('#storycounter').animate({top: '70vh', opacity: '100'}, '10');
+      $('#storycounter').animate({top: '60vh', opacity: '0'}, '100');
   }else if(el =='') {
     numFunc(0);
+    //This will fade-out the level counter
+    $('#levelcounter').animate({top: '70vh', opacity: '0'}, '10');
+    $('#levelcounter').animate({top: '70vh', opacity: '100'}, '10');
+    $('#levelcounter').animate({top: '60vh', opacity: '0'}, '100');
   } else {
     numFunc(parseInt(el));
+    //This will fade-out the level counter
+    $('#levelcounter').animate({top: '70vh', opacity: '0'}, '10');
+    $('#levelcounter').animate({top: '70vh', opacity: '100'}, '10');
+    $('#levelcounter').animate({top: '60vh', opacity: '0'}, '100');
   }
   $('#typeinput').val('');
 }
@@ -43,9 +55,19 @@ function numFunc(num) {
     $('#numcount').text(count);
     $('#sum').text(sum);
     $('#mean').text(mean);
+ 
   }
   event.preventDefault();
   sum = 0;
+//This effects the monster animations
+  $('.monster').css('animation-name', 'pan');
+  $('.monster').css('animation-delay', '0s');
+  $('.monster').css('animation-duration', '2s');
+  $('.monster').css('animation-iteration-count', '1');
+  $('.ani').css('animation-name','happy');
+  $('.ani').css('animation-duration', '5s');
+  $('.ani').css('animation-iteration-count', '1');
+  $('.ani').css('background-position', '100% top');
 }
  
 //---------------------------------------------------------------------------------//
@@ -61,6 +83,15 @@ function wordFunc(word) {
     compareWords(value);});
   $('#concatenated').append(' ', sentence);
   event.preventDefault();
+//This effects the monster animations
+  $('.monster').css('animation-name', 'shake');
+  $('.monster').css('animation-delay', '0s');
+  $('.monster').css('animation-duration', '2s');
+  $('.monster').css('animation-iteration-count', '1');
+  $('.ani').css('animation-name','hurt');
+  $('.ani').css('animation-duration', '5s');
+  $('.ani').css('animation-iteration-count', '1');
+  $('.ani').css('background-position', '60% top');
 }
  
 //---------------------------------------------------------------------------------//
@@ -128,3 +159,4 @@ function resetForm() {
 }
  
 //---------------------------------------------------------------------------------//
+ 
