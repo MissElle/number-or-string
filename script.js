@@ -102,9 +102,13 @@ function wordCountTemp(el) {
 //http://stackoverflow.com/questions/957537/how-can-i-display-a-javascript-object
  
 function wordCount(el, key) {
-  var count = $('<p>').text(parseInt(obj[el]));
+  var count = $('<p>').text(parseInt(obj[el]+1));
   obj[el] = obj[el]+1 || 1;
+  if(obj[el] === 1) {
+    $('#wordcount').append('<p>' + 1 + '</p>');
+  }else {
     $('#wordcount').append(count);
+  }
   console.log(obj);
 }
  
