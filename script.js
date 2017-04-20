@@ -57,10 +57,8 @@ function wordFunc(word) {
   var sentence = wordCompare.join(' ');
   var indWords = sentence.split(' ');
  
- $.each(indWords, function(index, value) {
-    compareWords(value);});
   $.each(indWords, function(index, value) {
-    wordCount(value);});
+    compareWords(value);});
   $('#concatenated').append(' ', sentence);
   event.preventDefault();
 }
@@ -80,13 +78,13 @@ function compareWords(el) {
   }else {
     wordList.push(y);
   }
+  wordCount(y);
 }
  
 //---------------------------------------------------------------------------------//
 //This function worked but had too many bugs. Leaving it in for recorded value
  
 function wordCountTemp(el) {
-  var z = 0;
   for (var i=0; i<worList.length; i++) {
     if (wordList[i] === el) {
       z++;
@@ -106,7 +104,6 @@ function wordCount(el) {
   count.attr('id', el);
   obj[el] = obj[el]+1|| 1;
   if(obj[el] !== 1) {
-//    $('#wordcount').append(count);
     $('#' +el).replaceWith(count);
   }else {
     $('#wordcount').append('<p id="'+el+'">'+1+'</p>');
