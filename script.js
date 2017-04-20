@@ -27,6 +27,7 @@ function findType(el) {
   } else {
     numFunc(parseInt(el));
   }
+  $('#typeinput').val('');
 }
  
 //---------------------------------------------------------------------------------//
@@ -56,10 +57,8 @@ function wordFunc(word) {
   var sentence = wordCompare.join(' ');
   var indWords = sentence.split(' ');
  
-  $.each(indWords, function(index, value) {
+ $.each(indWords, function(index, value) {
     compareWords(value);});
-//The wordcount html resets the area before the function runs so the numbers are right every time
-//  $('#wordcount').html(' ');
   $.each(indWords, function(index, value) {
     wordCount(value);});
   $('#concatenated').append(' ', sentence);
@@ -112,7 +111,6 @@ function wordCount(el) {
   }else {
     $('#wordcount').append('<p id="'+el+'">'+1+'</p>');
   }
-  console.log(obj);
 }
  
 //---------------------------------------------------------------------------------//
@@ -129,5 +127,7 @@ function resetForm() {
   wordList = [];
   obj = {};
   sum = 0;
-  console.log("the button is working");
+  $('#typeinput').val('');
 }
+ 
+//---------------------------------------------------------------------------------//
