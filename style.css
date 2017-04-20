@@ -186,7 +186,7 @@ form {
  
 .ani {
   margin: 1em 0;
-  background-image: url("https://misselle.github.io/number-or-string/images/bitmap.png");
+  background-image: url("images/bitmap.png");
   width: 46vh;
   height: 50vh;
   background-repeat: no-repeat;
@@ -220,10 +220,10 @@ form {
 /*These are animated in javascript*/
  
 #levelcounter {
-  background-image: url("https://misselle.github.io/number-or-string/images/signs.png");
+  background-image: url("images/signs.png");
   background-size: 27vh;
   background-repeat: no-repeat;
-  background-position: left-top;
+  background-position: left top;
   opacity: 0;
   width: 15vh;
   height: 15vh;
@@ -233,7 +233,7 @@ form {
 }
  
 #storycounter{
-  background-image: url("https://misselle.github.io/number-or-string/images/signs.png");
+  background-image: url("images/signs.png");
   background-size: 27vh;
   background-repeat: no-repeat;
   background-position: 110% top;
@@ -292,7 +292,7 @@ h1, h2, h3, h4, p, button, textarea {font-family: 'VT323', monospace;}
 h2 {font-size: 3em; line-height: 0em;}
  
 p {font-size: 1.3em; line-height: 1.2em;}
-h4{font-size: 1.3em;}
+h4{font-size: 1.2em;}
 .points {font-size: 2em;}
 textarea {font-size: 1.5em; border-color:transparent transparent #000000 transparent; border-width: .1em; border-style-bottom: double;}
 button {font-size: 1.5em; background-color: transparent; border-color: #000000; border-style: double; border-width: .2em;}
