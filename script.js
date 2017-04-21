@@ -146,11 +146,19 @@ function wordCount(el) {
  
 function resetForm() {
   $('#wordcount').html(' ');
-  $('#words').html(' ');
+  $('#words-smith').html(' ');
   $('#numcount').html(' ');
   $('#sum').html(' ');
   $('#mean').html(' ');
   $('#concatenated').html(' ');
+  $('.monster').css('animation-name', 'jump');
+  $('.monster').css('animation-delay', '0s');
+  $('.monster').css('animation-duration', '7s');
+  $('.monster').css('animation-iteration-count', 'infinite');
+  $('.ani').css('animation-name','switchsides');
+  $('.ani').css('animation-duration', '20s');
+  $('.ani').css('animation-iteration-count', 'infinite');
+  $('.ani').css('background-position', '0% top');
   numList = [];
   wordList = [];
   obj = {};
@@ -159,4 +167,3 @@ function resetForm() {
 }
  
 //---------------------------------------------------------------------------------//
- 
