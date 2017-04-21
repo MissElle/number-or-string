@@ -22,6 +22,7 @@ button {
   width: 10%;
   height: 1.5em;
   text-align: center;
+  overflow: hidden;
 }
  
 form {
@@ -38,20 +39,21 @@ form {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-  height: 50vh;
+  height: 60vh;
 }
  
  
-#words {
+#words-smith {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
   clip-path: polygon(75% 0%, 100% 100%, 0% 100%, 25% 0%);
-  width: 30%;
+  width: 30em;
   line-height: 0em;
   overflow: visible;
+  height: 50vh;
 }
  
 #wordcount {
@@ -61,9 +63,10 @@ form {
   align-items: center;
   align-content: center;
   clip-path: polygon(75% 0%, 100% 100%, 0% 100%, 25% 0%);
-  width: 30%;
+  width: 30em;
   line-height: 0em;
   overflow: visible;
+  height: 50vh;
 }
  
 /*----------------------------------------------------------*/
@@ -74,7 +77,7 @@ form {
   top: 0vh;
   left: 0vw;
   animation-name: jump;
-  animation-duration: 10s;
+  animation-duration: 7s;
   animation-iteration-count: infinite;
   animation-timing-function: ease;
   animation-delay: 2s;
@@ -159,7 +162,7 @@ form {
   0% {top: 0vh; left: 0vw;}
   15% {top: 0vh; left: 4vw;}
   25% {top: 0vh; left: -4vw;}
- 30% {top: 0vh; left: 4vw;}
+  30% {top: 0vh; left: 4vw;}
   33% {top: 0vh; left: -4vw;}
   35% {top: 0vh; left: 6vw;}
   37% {top: 0vh; left: -6vw;}
@@ -187,20 +190,21 @@ form {
 .ani {
   margin: 1em 0;
   background-image: url("images/bitmap.png");
-  width: 46vh;
-  height: 50vh;
+  width: 49vh;
+  height: 60vh;
   background-repeat: no-repeat;
-  background-size: 290vh;
+  background-size: 340vh;
   background-position: 0% top;
   animation-name: switchsides;
   animation-timing-function: step-start;
   animation-duration: 20s;
   animation-iteration-count: infinite;
+  pointer-events: none;
 }
  
 @keyframes happy{
-  0% {background-position: 80% top;}
-  50% {background-position: 80% top;}
+  0% {background-position: 79% top;}
+  50% {background-position: 79% top;}
   100% {background-position: 100% top;}
 }
  
@@ -256,16 +260,16 @@ form {
 .hitbox {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  align-content: space-between;
   width: 30%;
-  max-height: 40vh;
+  max-height: 30vh;
   padding: 0 1em;
 }
  
 .storybox {
   display: flex;
   flex-flow: column nowrap;
-  width: 69%;
+  width: 67%;
   min-height: 15em;
   padding: 0 1em;
   text-align: justify;
@@ -289,10 +293,8 @@ font-family: 'VT323', monospace;
  
 h1, h2, h3, h4, p, button, textarea {font-family: 'VT323', monospace;}
  
-h2 {font-size: 3em; line-height: 0em;}
- 
+h2 {font-size: 2.5em; line-height: .4em;}
 p {font-size: 1.3em; line-height: 1.2em;}
-h4{font-size: 1.2em;}
 .points {font-size: 2em;}
 textarea {font-size: 1.5em; border-color:transparent transparent #000000 transparent; border-width: .1em; border-style-bottom: double;}
 button {font-size: 1.5em; background-color: transparent; border-color: #000000; border-style: double; border-width: .2em;}

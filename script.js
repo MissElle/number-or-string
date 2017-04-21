@@ -23,21 +23,21 @@ function findType(el) {
   if (isNaN(el)) {
     wordFunc(el);
       //This will fade-out the story counter
-      $('#storycounter').animate({top: '50vh', opacity: '0'}, '10');
-      $('#storycounter').animate({top: '50vh', opacity: '100'}, '10');
-      $('#storycounter').animate({top: '40vh', opacity: '0'}, '100');
+      $('#storycounter').animate({top: '60vh', opacity: '0'}, '10');
+      $('#storycounter').animate({top: '60vh', opacity: '100'}, '10');
+      $('#storycounter').animate({top: '50vh', opacity: '0'}, '100');
   }else if(el =='') {
     numFunc(0);
     //This will fade-out the level counter
-    $('#levelcounter').animate({top: '50vh', opacity: '0'}, '10');
-    $('#levelcounter').animate({top: '50vh', opacity: '100'}, '10');
-    $('#levelcounter').animate({top: '40vh', opacity: '0'}, '100');
+    $('#levelcounter').animate({top: '60vh', opacity: '0'}, '10');
+    $('#levelcounter').animate({top: '60vh', opacity: '100'}, '10');
+    $('#levelcounter').animate({top: '50vh', opacity: '0'}, '100');
   } else {
     numFunc(parseInt(el));
     //This will fade-out the level counter
-    $('#levelcounter').animate({top: '50vh', opacity: '0'}, '10');
-    $('#levelcounter').animate({top: '50vh', opacity: '100'}, '10');
-    $('#levelcounter').animate({top: '40vh', opacity: '0'}, '100');
+    $('#levelcounter').animate({top: '60vh', opacity: '0'}, '10');
+    $('#levelcounter').animate({top: '60vh', opacity: '100'}, '10');
+    $('#levelcounter').animate({top: '50vh', opacity: '0'}, '100');
   }
   $('#typeinput').val('');
 }
@@ -104,7 +104,7 @@ function compareWords(el) {
   var indWord = $('<p>').text(y);
  
   if($.inArray(y, wordList) === -1){   
-    $('#words').append(indWord);
+    $('#words-smith').append(indWord);
     wordList.push(y);
   }else {
     wordList.push(y);
@@ -159,3 +159,4 @@ function resetForm() {
 }
  
 //---------------------------------------------------------------------------------//
+ 
